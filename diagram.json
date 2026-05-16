@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": 189, "left": 70, "attrs": {} },
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 182.4, "left": 417.64, "attrs": {} },
+    {
+      "type": "wokwi-servo",
+      "id": "servo1",
+      "top": 8.6,
+      "left": 280.2,
+      "rotate": 270,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 409.4,
+      "left": 441.6,
+      "attrs": { "color": "red", "xray": "1" }
+    },
+    { "type": "wokwi-relay-module", "id": "relay1", "top": 105.8, "left": 163.2, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:5V", "bb1:bn.25", "red", [ "h-57.45" ] ],
+    [ "esp:GND.1", "bb1:bp.25", "black", [ "h-9.45", "v38.4" ] ],
+    [ "bb1:bp.1", "bb1:tp.1", "green", [ "v0" ] ],
+    [ "bb1:tn.2", "bb1:bn.2", "green", [ "v0" ] ],
+    [ "servo1:GND", "bb1:tp.23", "black", [ "v0" ] ],
+    [ "bb1:tn.24", "servo1:V+", "green", [ "v0" ] ],
+    [ "esp:18", "servo1:PWM", "green", [ "h9.6", "v-115.2", "h-153.8" ] ],
+    [ "bb1:bp.24", "btn1:1.l", "green", [ "v0" ] ],
+    [ "btn1:2.r", "esp:4", "green", [ "h19.4", "v-115" ] ],
+    [ "esp:19", "bb1:7t.c", "green", [ "h38.4", "v220.8", "h-412.8" ] ],
+    [ "relay1:IN", "bb1:7t.a", "green", [ "h0" ] ],
+    [ "relay1:GND", "bb1:tp.5", "black", [ "h0" ] ],
+    [ "relay1:VCC", "bb1:tn.4", "red", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
