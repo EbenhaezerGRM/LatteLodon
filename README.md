@@ -1,4 +1,6 @@
-Use [Wokwi for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=wokwi.wokwi-vscode) to simulate this project.
+# LatteLodon Automatic Feeder System
+
+LatteLodon Automatic Feeder System is an ESP32-based smart pet feeder designed to feed a dog named **LatteLodon** automatically and remotely over the internet.
 
 ## Building
 
