@@ -1,7 +1,3 @@
-# ESP32 HTTP Server Example
-
-ESP32 web server example: control 2 LEDs from a web page hosted on the ESP32.
-
 Use [Wokwi for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=wokwi.wokwi-vscode) to simulate this project.
 
 ## Building
